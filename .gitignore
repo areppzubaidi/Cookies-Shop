@@ -1,0 +1,25 @@
+# Terraform
+terraform/.terraform/
+terraform/terraform.tfstate*
+terraform/*.tfvars
+terraform/terraform.tfvars
+
+# Ansible
+ansible/*.retry
+ansible/inventory.ini
+
+# Docker
+docker/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Sensitive files
+*.pem
+*.key
+*.cert

@@ -1,0 +1,15 @@
+# AWS Credentials
+aws_access_key = "YOUR_ACCESS_KEY_HERE"
+aws_secret_key = "YOUR_SECRET_KEY_HERE"
+key_name       = "your-key-pair-name"
+
+public_key_path = "~/.ssh/id_rsa.pub"
+key_name = "cookies-shop-key"
+
+# Optional: Override default values
+# aws_region    = "ap-southeast-1"
+# instance_type = "t2.micro"
+
+aws_region       = "ap-southeast-1"
+key_name         = "cookies-shop-key"
+public_key_path  = "/Users/nurariffzubaidi/.ssh/id_rsa.pub"

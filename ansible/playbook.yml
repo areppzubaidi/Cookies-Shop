@@ -1,0 +1,100 @@
+---
+- name: Deploy Cookies Shop Application
+  hosts: all
+  become: yes
+  vars:
+    github_repo: "https://github.com/yourusername/cookies-shop.git"
+    app_dir: "/opt/cookies-shop"
+  
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Install required packages
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - git
+          - python3-pip
+          - python3-setuptools
+        state: present
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker repository
+      apt_repository:
+        repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_facts['distribution_release'] }} stable"
+        state: present
+
+    - name: Update apt cache after adding Docker repo
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker-ce
+        state: present
+
+    - name: Install Docker Python module
+      pip:
+        name: docker
+        state: present
+        executable: pip3
+
+    - name: Start and enable Docker service
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Ensure git directory exists
+      file:
+        path: "{{ app_dir }}"
+        state: directory
+        mode: '0755'
+
+    - name: Clone or update repository
+      git:
+        repo: "{{ github_repo }}"
+        dest: "{{ app_dir }}"
+        update: yes
+        version: main
+      ignore_errors: yes
+
+    - name: Stop and remove existing container if running
+      docker_container:
+        name: cookies-shop
+        state: absent
+        force_kill: yes
+      ignore_errors: yes
+
+    - name: Remove existing image
+      docker_image:
+        name: cookies-shop
+        state: absent
+      ignore_errors: yes
+
+    - name: Build Docker image
+      docker_image:
+        name: cookies-shop
+        build:
+          path: "{{ app_dir }}"
+        source: build
+        state: present
+
+    - name: Run Docker container
+      docker_container:
+        name: cookies-shop
+        image: cookies-shop
+        state: started
+        restart_policy: always
+        ports:
+          - "80:80"

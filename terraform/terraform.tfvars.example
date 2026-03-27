@@ -1,0 +1,3 @@
+aws_region     = "ap-southeast-1"
+key_name       = "cookies-shop-key"
+public_key_path = "~/.ssh/id_rsa.pub"

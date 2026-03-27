@@ -1,0 +1,15 @@
+---
+- name: Test Connection
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ping test
+      ping:
+    
+    - name: Check OS
+      command: cat /etc/os-release
+      register: os_info
+    
+    - name: Show OS info
+      debug:
+        var: os_info.stdout_lines
