@@ -17,35 +17,18 @@
 
 ## 📸 Screenshots
 
-> **📌 Drag and drop your screenshots below!**  
-> Take screenshots of your live website and drag them into the placeholder areas.
 
 ### 🏠 Home Page
-<!-- Drag and drop your home page screenshot here -->
-![Home Page](https://via.placeholder.com/1200x600/8B4513/FFFFFF?text=Drag+Your+Home+Page+Screenshot+Here)
-*Hero banner with call-to-action and product gallery*
 
-### 🍪 Products Gallery
-<!-- Drag and drop your products screenshot here -->
-![Products](https://via.placeholder.com/1200x600/8B4513/FFFFFF?text=Drag+Your+Products+Screenshot+Here)
-*Six signature cookie varieties with descriptions and pricing*
+<img width="1924" height="977" alt="Screenshot 2026-03-27 at 8 13 59 AM" src="https://github.com/user-attachments/assets/b3b74432-e300-4df5-aade-427dc6c89565" />
 
 ### 📖 About Page
-<!-- Drag and drop your about page screenshot here -->
-![About Page](https://via.placeholder.com/1200x600/8B4513/FFFFFF?text=Drag+Your+About+Page+Screenshot+Here)
-*Company story, mission, and what makes our cookies special*
+<img width="1914" height="976" alt="Screenshot 2026-03-27 at 8 19 02 AM" src="https://github.com/user-attachments/assets/c1e10a6f-e27f-4764-a856-833e5768447e" />
+
 
 ### 📞 Contact Page
-<!-- Drag and drop your contact page screenshot here -->
-![Contact Page](https://via.placeholder.com/1200x600/8B4513/FFFFFF?text=Drag+Your+Contact+Page+Screenshot+Here)
-*Interactive contact form with real-time validation*
+<img width="1916" height="975" alt="Screenshot 2026-03-27 at 8 19 14 AM" src="https://github.com/user-attachments/assets/c7790989-02f8-40c7-80fa-f3a5310f346b" />
 
-### 📱 Mobile Responsive View
-<!-- Drag and drop your mobile view screenshot here -->
-<div align="center">
-  <img src="https://via.placeholder.com/400x800/8B4513/FFFFFF?text=Drag+Your+Mobile+Screenshot+Here" alt="Mobile View" width="300">
-  <p><em>Fully responsive design optimized for mobile devices</em></p>
-</div>
 
 ---
 
