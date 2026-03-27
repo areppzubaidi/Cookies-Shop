@@ -399,28 +399,3 @@ git commit -m "Add professional README with proper formatting"
 git push origin main
 ```
 
-### To Add Your Actual Screenshots:
-
-1. **Take screenshots** of your live website at `http://18.138.249.114`
-2. **Save them** as:
-   - `homepage.png`
-   - `products.png`
-   - `about.png`
-   - `contact.png`
-   - `mobile.png`
-
-3. **Upload to GitHub:**
-   - Go to your repository
-   - Create a `screenshots` folder
-   - Drag and drop your images
-   - Or edit README.md and drag images directly into the placeholder areas
-
-The README now has:
-- ✅ Properly formatted code blocks
-- ✅ Clean table structures
-- ✅ Clear section hierarchy
-- ✅ Working badges
-- ✅ Complete documentation
-- ✅ Drag-and-drop screenshot placeholders
-
-Your README will look professional and well-structured on GitHub! 🎉
